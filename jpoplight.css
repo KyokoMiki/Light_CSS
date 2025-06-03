@@ -226,7 +226,7 @@ canvas {
 	color:#555
 }
 
-#artist .edit_form, #artist_information, #changelog .changelog_entry, #collage .create_form, #edit_collage, #filter_form, #friends .friends_table, #inbox #searchbox, #questions .box2, #reportform, #reports .box, #similar_artist_map, #staff .box, #torrents .edit_form, #torrents .torrent_description, #upload #content > div, #user .edit_form:not(#userform), .inbox_message, .sidebar .box, .users_reports_table, .vertical_space.box, table.forum_post {
+#artist .edit_form, #artist_information, #changelog .changelog_entry, #collage .create_form, #edit_collage, #filter_form, #friends .friends_table, #inbox #searchbox, #questions .box2, #reportform, #reports .box, #similar_artist_map, #staff .box, #torrents .edit_form, #torrents .torrent_table + .box, #upload #content > div, #user .edit_form:not(#userform), .inbox_message, .sidebar .box, .users_reports_table, .vertical_space.box, table.forum_post {
 	background-color: #f0f0f0;
 	border: 1px solid #d3d0d1;
 	-webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, .1);
@@ -318,7 +318,7 @@ canvas {
 	background-color:#fafafa
 }
 
-#artist_information, #similar_artist_map, #torrents .torrent_description {
+#artist_information, #similar_artist_map, #torrents .torrent_table + .box {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-left: auto;
@@ -327,7 +327,7 @@ canvas {
 	width:100%
 }
 
-#artist_information .colhead, #artist_information .head, #similar_artist_map .colhead, #similar_artist_map .head, #torrents .torrent_description .colhead, #torrents .torrent_description .head {
+#artist_information .colhead, #artist_information .head, #similar_artist_map .colhead, #similar_artist_map .head, #torrents .torrent_table + .box .colhead, #torrents .torrent_table + .box .head {
 	font-size: 1.1em;
 	padding-bottom: 8px;
 	padding-top: 8px;
@@ -340,11 +340,11 @@ canvas {
 	text-shadow:1px 1px 1px hsla(0, 0%, 100%, .2) !important
 }
 
-#artist_information .colhead a, #artist_information .head a, #similar_artist_map .colhead a, #similar_artist_map .head a, #torrents .torrent_description .colhead a, #torrents .torrent_description .head a {
+#artist_information .colhead a, #artist_information .head a, #similar_artist_map .colhead a, #similar_artist_map .head a, #torrents .torrent_table + .box .colhead a, #torrents .torrent_table + .box .head a {
 	color:#555
 }
 
-#artist_information .body, #similar_artist_map .body, #torrents .torrent_description .body {
+#artist_information .body, #similar_artist_map .body, #torrents .torrent_table + .box .body {
 	line-height:1.5em
 }
 
@@ -473,12 +473,12 @@ li {
 	border:0
 }
 
-.hidden {
+.hidden, .hide {
 	left: -10000px;
 	position:absolute
 }
 
-.hidden, input.hidden {
+.hidden, .hide, input.hidden, input.hide {
 	display:none
 }
 
@@ -543,7 +543,7 @@ input[style *="width: 98%"], textarea[style *="width: 98%"] {
 input[type=email]:focus, input[type=password]:focus, input[type=search]:focus, input[type=text]:focus, input[type=url]:focus, select:focus, textarea:focus {
 	outline: none;
 	background-color: #ddd;
-	border: 1px solid #e08080;
+	border: 1px solid #6EA0CE;
 	color:#000 !important
 }
 
@@ -658,7 +658,7 @@ marquee {
 	display:none !important
 }
 
-#artist_information img, .box_request_desc img, .news_post img, .profileinfo img, .torrent_description img, .torrentdetails img, .wiki_article img {
+#artist_information img, .box_request_desc img, .news_post img, .profileinfo img, .torrent_table + .box img, tr[id^="torrent_"] img, .wiki_article img {
 	max-width:100%
 }
 
@@ -883,7 +883,7 @@ p.min_padding {
 	content: "" !important
 }
 
-.forum_post pre, .forum_post pre code, .torrentdetails pre {
+.forum_post pre, .forum_post pre code, tr[id^="torrent_"] pre {
 	white-space: pre-wrap !important;
 	word-break:break-all !important
 }
@@ -954,11 +954,11 @@ p.min_padding {
 }
 
 .last_edited a {
-	color:#b67475
+	color:#6889A8
 }
 
 .icon_add, .icon_remove {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/plus.svg);
+	background-image: url(https://redacted.sh/static/styles/assets/icons/plus.svg);
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: 10px 10px;
@@ -980,11 +980,11 @@ p.min_padding {
 }
 
 .icon_remove {
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Remove.svg)
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Remove.svg)
 }
 
 .additional_add_artist a, .remove a, .vote_album_down, .vote_album_up, a.small_downvote, a.small_upvote, a.vote_artist_down, a.vote_artist_up, a.vote_tag_down, a.vote_tag_up {
-	background: url(https://redacted.ch/static/styles/assets/icons/Torrent-RM-tag-artist.svg) no-repeat 50%;
+	background: url(https://redacted.sh/static/styles/assets/icons/Torrent-RM-tag-artist.svg) no-repeat 50%;
 	display: inline-block;
 	-webkit-filter: brightness(80%);
 	filter: brightness(80%);
@@ -999,18 +999,18 @@ p.min_padding {
 }
 
 .additional_add_artist a {
-	background-image:url(https://redacted.ch/static/styles/assets/icons/plus.svg)
+	background-image:url(https://redacted.sh/static/styles/assets/icons/plus.svg)
 }
 
 a.small_upvote, a.vote_artist_up, a.vote_tag_up {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Voting-Up.svg);
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Voting-Up.svg);
 	background-size: 9px 9px;
 	-webkit-filter: brightness(60%);
 	filter:brightness(60%)
 }
 
 a.small_downvote, a.vote_artist_down, a.vote_tag_down {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Voting-Down.svg);
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Voting-Down.svg);
 	background-size: 9px 9px;
 	-webkit-filter: brightness(60%);
 	filter: brightness(60%);
@@ -1023,12 +1023,12 @@ a.small_downvote, a.vote_artist_down, a.vote_tag_down {
 }
 
 .vote_album_up {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Voting-Up.svg);
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Voting-Up.svg);
 	background-size:10px
 }
 
 .vote_album_down {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Voting-Down.svg);
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Voting-Down.svg);
 	background-size:10px
 }
 
@@ -1074,9 +1074,9 @@ a.small_downvote, a.vote_artist_down, a.vote_tag_down {
 }
 
 #reply_box textarea:focus {
-	border-color: #dab7b7;
-	-webkit-box-shadow: 0 0 0 3px #dab7b7, inset 3px 3px 5px rgba(0, 0, 0, .15);
-	box-shadow:0 0 0 3px #dab7b7, inset 3px 3px 5px rgba(0, 0, 0, .15)
+	border-color: #B0C1D1;
+	-webkit-box-shadow: 0 0 0 3px #B0C1D1, inset 3px 3px 5px rgba(0, 0, 0, .15);
+	box-shadow:0 0 0 3px #B0C1D1, inset 3px 3px 5px rgba(0, 0, 0, .15)
 }
 
 #reply_box .preview_submit #subscribebox + label, #reply_box .preview_submit input[type=button], #reply_box .preview_submit input[type=submit] {
@@ -1104,16 +1104,16 @@ blockquote {
 .quoteheader {
 	font-weight: 400;
 	padding-left: 15px;
-	color:#d96d00
+	color:#7A7CFF
 }
 
 .important_text {
-	color: #bd5d00;
+	color: #5E61FF;
 	font-weight:600
 }
 
 .new {
-	color:#d14242
+	color:#2C77BF
 }
 
 span.size1 {
@@ -1177,7 +1177,7 @@ span.size10 {
 }
 
 strong.mature + strong {
-	background: #000 url(https://redacted.ch/static/styles/assets/icons/Forum-Mature.svg) no-repeat 0 0;
+	background: #000 url(https://redacted.sh/static/styles/assets/icons/Forum-Mature.svg) no-repeat 0 0;
 	border: 2px solid #fff;
 	color: #333;
 	display: inline-block;
@@ -1408,7 +1408,7 @@ strong.mature + strong + br + a {
 }
 
 #userinfo_minor {
-	background: transparent url(https://redacted.ch/static/styles/assets/icons/drop-down-menu.svg) no-repeat left -22px center;
+	background: transparent url(https://redacted.sh/static/styles/assets/icons/drop-down-menu.svg) no-repeat left -22px center;
 	background-size: 165px 24px !important;
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 123px;
@@ -1423,7 +1423,7 @@ strong.mature + strong + br + a {
 
 @media only screen and (max-width: 789px) {
 	#userinfo_minor {
-		background: transparent url(https://redacted.ch/static/styles/assets/icons/drop-down-3.svg) no-repeat left 15px center !important;
+		background: transparent url(https://redacted.sh/static/styles/assets/icons/drop-down-3.svg) no-repeat left 15px center !important;
 		background-size: 25% !important;
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 25%;
@@ -1506,87 +1506,87 @@ strong.mature + strong + br + a {
 }
 
 #nav_inbox a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Messages-read.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Messages-read.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Messages-read.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Messages-read.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Messages-read.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Messages-read.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Messages-read.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Messages-read.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_staffinbox a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Staff-messages.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Staff-messages.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Staff-messages.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Staff-messages.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Staff-messages.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Staff-messages.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Staff-messages.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Staff-messages.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_uploaded a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Uploads.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Uploads.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Uploads.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Uploads.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Uploads.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Uploads.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Uploads.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Uploads.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_bookmarks a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Bookmark.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Bookmark.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Bookmark.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Bookmark.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Bookmark.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Bookmark.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Bookmark.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Bookmark.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_notifications a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Notifications-read.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Notifications-read.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Notifications-read.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Notifications-read.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Notifications-read.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Notifications-read.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Notifications-read.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Notifications-read.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_subscriptions a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Subscriptions-read.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Subscriptions-read.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Subscriptions-read.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Subscriptions-read.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Subscriptions-read.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Subscriptions-read.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Subscriptions-read.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Subscriptions-read.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_comments a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Comments.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Comments.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Comments.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Comments.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Comments.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Comments.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Comments.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Comments.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_friends a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Friends.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Friends.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Friends.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Friends.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Friends.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Friends.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Friends.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Friends.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_better a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Better.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Better.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Better.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Better.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Better.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Better.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Better.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Better.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_posts a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Posts.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Posts.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Posts.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Posts.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Posts.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Posts.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Posts.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Posts.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_logchecker a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Wiki-Log.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Wiki-Log.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Wiki-Log.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Wiki-Log.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Wiki-Log.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Wiki-Log.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Wiki-Log.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Wiki-Log.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #nav_subscriptions.new-subscriptions a {
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Subscriptions-new.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Subscriptions-new.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
-	background-image: url(https://redacted.ch/static/styles/assets/icons/Header-Subscriptions-new.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Subscriptions-new.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Subscriptions-new.svg), -webkit-gradient(linear, right top, left top, from(#ddd), color-stop(50%, #ddd), color-stop(50%, rgb(var(--alt-accent))), to(rgb(var(--base-accent))));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Subscriptions-new.svg), -webkit-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)));
+	background-image: url(https://redacted.sh/static/styles/assets/icons/Header-Subscriptions-new.svg), -o-linear-gradient(right, #ddd, #ddd 50%, rgb(var(--alt-accent)) 50%, rgb(var(--base-accent)));
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Subscriptions-new.svg), linear-gradient(270deg, #ddd, #ddd 50%, rgb(var(--alt-accent)) 0, rgb(var(--base-accent)))
 }
 
 #userinfo_major li {
@@ -1619,15 +1619,15 @@ strong.mature + strong + br + a {
 }
 
 #stats_required {
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Stats-Ratio-required.svg)
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Stats-Ratio-required.svg)
 }
 
 #fl_tokens {
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Stats-token-count.svg)
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Stats-token-count.svg)
 }
 
 .my_demBuffer {
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Stats-Buffer.svg)
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Stats-Buffer.svg)
 }
 
 #stats_ratio {
@@ -1740,7 +1740,7 @@ ul#userinfo_username:hover li:first-of-type a {
 }
 
 #userinfo a[href*='upload.php'] {
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Upload-torrent.svg)
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Upload-torrent.svg)
 }
 
 #userinfo a[href*='user.php?action=invite'] {
@@ -1874,8 +1874,8 @@ ul#userinfo_username:hover li:first-of-type a {
 }
 
 .alertbar a {
-	background-color: hsla(0, 100%, 85%, .1);
-	border: 1px solid hsla(0, 100%, 85%, .1);
+	background-color: rgba(163, 203, 240, .1);
+	border: 1px solid rgba(163, 203, 240, .1);
 	border-radius: 5px;
 	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .4);
 	box-shadow: 0 0 3px rgba(0, 0, 0, .4);
@@ -1885,7 +1885,7 @@ ul#userinfo_username:hover li:first-of-type a {
 }
 
 .alertbar a:hover {
-	background-color: hsla(0, 100%, 85%, .13);
+	background-color: rgba(163, 203, 240, .13);
 	color:#777
 }
 
@@ -2046,7 +2046,7 @@ ul#userinfo_username:hover li:first-of-type a {
 	z-index:10000002
 }
 
-.curtain.hidden, .lightbox.hidden {
+.curtain.hidden, .lightbox.hidden, .curtain.hide, .lightbox.hide {
 	display: unset;
 	opacity: 0;
 	visibility:hidden
@@ -2057,7 +2057,7 @@ ul#userinfo_username:hover li:first-of-type a {
 }
 
 @media only screen and (max-width: 789px) {
-	.post_id, .user_title {
+	a[href^="forums.php?action=viewthread"], .user_title {
 		display:none !important
 	}
 
@@ -2124,15 +2124,15 @@ ul#userinfo_username:hover li:first-of-type a {
 	}
 
 	#userinfo_username :first-of-type a {
-		background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Profile.svg) !important
+		background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Profile.svg) !important
 	}
 
 	#userinfo_username a[href*='logout.php'] {
-		background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Logout.svg) !important
+		background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Logout.svg) !important
 	}
 
 	#userinfo_username a[href*='user.php?action=edit'] {
-		background-image:url(https://redacted.ch/static/styles/assets/icons/Header-Edit-Profile.svg) !important
+		background-image:url(https://redacted.sh/static/styles/assets/icons/Header-Edit-Profile.svg) !important
 	}
 
 	#userinfo_major {
@@ -3490,23 +3490,23 @@ table.forum_post {
 	margin:10px 0 20px
 }
 
-table.forum_post.forum_unread .colhead_dark .post_id {
-	/*background-image:url(https://redacted.ch/static/styles/assets/post_icons/postid-light-alt.png)*/
+table.forum_post.forum_unread .colhead_dark a[href^="forums.php?action=viewthread"] {
+	background-image:url(https://redacted.sh/static/styles/assets/post_icons/postid-light-alt.png)
 }
 
-table.forum_post.forum_unread .colhead_dark a[id *=quote] {
-	background-image: url(https://redacted.ch/static/styles/assets/post_icons/quote-light-alt.png)
+table.forum_post.forum_unread .colhead_dark a[href="#quickpost"] {
+	background-image: url(https://redacted.sh/static/styles/assets/post_icons/quote-light-alt.png)
 }
 
-table.forum_post.forum_unread .colhead_dark div[style="float: right;"]:last-of-type > a:first-of-type {
-	background-image:url(https://redacted.ch/static/styles/assets/post_icons/report-light-alt.png)
+table.forum_post.forum_unread .colhead_dark a[href^="reports.php"] {
+	background-image:url(https://redacted.sh/static/styles/assets/post_icons/report-light-alt.png)
 }
 
-table.forum_post.forum_unread .go_to_top {
-	background-image: url(https://redacted.ch/static/styles/assets/post_icons/top-light-alt.png)
+table.forum_post.forum_unread .colhead_dark a[href="#top"] {
+	background-image: url(https://redacted.sh/static/styles/assets/post_icons/top-light-alt.png)
 }
 
-table.forum_post .colhead_dark td .go_to_top, table.forum_post .colhead_dark td .post_id, table.forum_post .colhead_dark td a[id *=quote], table.forum_post .colhead_dark td div[style="float: right;"]:last-of-type > a:first-of-type {
+table.forum_post .colhead_dark td a[href="#top"], table.forum_post .colhead_dark td a[href^="forums.php?action=viewthread"], table.forum_post .colhead_dark td a[href="#quickpost"], table.forum_post .colhead_dark td a[href^="reports.php"] {
 	background-clip: content-box;
 	background-position: left 4px center;
 	background-repeat: no-repeat;
@@ -3522,29 +3522,29 @@ table.forum_post .colhead_dark td .go_to_top, table.forum_post .colhead_dark td 
 	width: 16px
 }
 
-table.forum_post .colhead_dark td .go_to_top:hover, table.forum_post .colhead_dark td .post_id:hover, table.forum_post .colhead_dark td a[id *=quote]:hover, table.forum_post .colhead_dark td div[style="float: right;"]:last-of-type > a:first-of-type:hover {
+table.forum_post .colhead_dark td a[href="#top"]:hover, table.forum_post .colhead_dark td a[href^="forums.php?action=viewthread"]:hover, table.forum_post .colhead_dark td a[href="#quickpost"]:hover, table.forum_post .colhead_dark td a[href^="reports.php"]:hover {
 	background-position:right 4px center
 }
 
-table.forum_post .colhead_dark td .post_id {
+table.forum_post .colhead_dark td a[href^="forums.php?action=viewthread"] {
 	float: left;
 	/*margin-left: -17px;*/
 	margin-right: 4px;
-	/*background-image:url(https://redacted.ch/static/styles/assets/post_icons/postid-light.png)*/
+	/*background-image:url(https://redacted.sh/static/styles/assets/post_icons/postid-light.png)*/
 }
 
-table.forum_post .colhead_dark td a[id *=quote] {
-	background-image: url(https://redacted.ch/static/styles/assets/post_icons/quote-light.png)
+table.forum_post .colhead_dark td a[href="#quickpost"] {
+	background-image: url(https://redacted.sh/static/styles/assets/post_icons/quote-light.png)
 }
 
-table.forum_post .colhead_dark td div[style="float: right;"]:last-of-type > a:first-of-type {
-	background-image:url(https://redacted.ch/static/styles/assets/post_icons/report-light.png)
+table.forum_post .colhead_dark td a[href^="reports.php"] {
+	background-image:url(https://redacted.sh/static/styles/assets/post_icons/report-light.png)
 }
 
-table.forum_post .colhead_dark td .go_to_top {
+table.forum_post .colhead_dark td a[href="#top"] {
 	float: right;
 	margin: 0 0 0 -4px;
-	background-image:url(https://redacted.ch/static/styles/assets/post_icons/top-light.png)
+	background-image:url(https://redacted.sh/static/styles/assets/post_icons/top-light.png)
 }
 
 table.forum_post .colhead_dark td > div {
@@ -3560,9 +3560,10 @@ table.forum_post .colhead_dark td > div {
 	background: #cb5252 -webkit-linear-gradient(bottom, #c14a4a, #cb5252);
 	background: #cb5252 -o-linear-gradient(bottom, #c14a4a 0, #cb5252 100%);
 	background: #cb5252 linear-gradient(0deg, #c14a4a 0, #cb5252);
-	border: 1px solid #b93030;
+	border: 1px solid #1D65A8;
 	color: #f2caca;
-	text-shadow:1px 1px 1px rgba(0, 0, 0, .25)
+	text-shadow:1px 1px 1px rgba(0, 0, 0, .25);
+	filter: hue-rotate(209deg)
 }
 
 .forum_post.forum_unread .colhead_dark td a {
@@ -3663,41 +3664,41 @@ table.forum_post td.body {
 	vertical-align:middle
 }
 
-.forum_index h3 {
+table:has(.forum_group_header) h3 {
 	font-size: 1.4em;
 	padding-top:10px
 }
 
-.forum_index {
+table:has(.forum_group_header) {
 	margin-bottom:25px
 }
 
-.forum_index tr td {
+table:has(.forum_group_header) tr td {
 	border-bottom: 1px solid #ddd !important;
 	color:#757273
 }
 
-.forum_index a {
+table:has(.forum_group_header) a {
 	font-weight: 400;
 	color:#3d3333
 }
 
-.forum_index a:hover {
+table:has(.forum_group_header) a:hover {
 	-webkit-transition: all .1s linear;
 	-o-transition: all .1s linear;
 	transition: all .1s linear;
 	color:rgb(var(--alt-accent))
 }
 
-.forum_index .last_poster a {
+table:has(.forum_group_header) .last_poster a {
 	color:rgb(var(--base-accent))
 }
 
-.forum_index tr:not(.colhead), table.forum_list tr:not(.colhead) {
+table:has(.forum_group_header) tr:not(.colhead), table.forum_list tr:not(.colhead) {
 	border:0
 }
 
-.forum_index tr:not(.colhead) td, table.forum_list tr:not(.colhead) td {
+table:has(.forum_group_header) tr:not(.colhead) td, table.forum_list tr:not(.colhead) td {
 	background-color: transparent;
 	border-bottom: 0;
 	padding-right: 10px;
@@ -3706,25 +3707,25 @@ table.forum_post td.body {
 	transition:all .2s linear
 }
 
-.forum_index .colhead td:nth-of-type(3) {
+table:has(.forum_group_header) .colhead td:nth-of-type(3) {
 	padding-right: 10px;
 	text-align:right
 }
 
-.forum_list .forum_index .colhead td:nth-of-type(3) {
+.forum_list table:has(.forum_group_header) .colhead td:nth-of-type(3) {
 	text-align:left
 }
 
-.forum_list .forum_index .colhead td:nth-of-type(4), .forum_list .forum_index .colhead td:nth-of-type(5) {
+.forum_list table:has(.forum_group_header) .colhead td:nth-of-type(4), .forum_list table:has(.forum_group_header) .colhead td:nth-of-type(5) {
 	padding-right: 10px;
 	text-align:right
 }
 
-.forum_index tr:last-of-type td, table.forum_list tr:last-of-type td {
+table:has(.forum_group_header) tr:last-of-type td, table.forum_list tr:last-of-type td {
 	border-bottom:0
 }
 
-.forum_index tr.colhead td, table.forum_list tr.colhead td {
+table:has(.forum_group_header) tr.colhead td, table.forum_list tr.colhead td {
 	padding-left: 8px;
 	padding-right: 25px;
 	color: #836846;
@@ -3856,7 +3857,7 @@ form#poll input {
 }
 
 .unread_locked {
-	background-image:url(https://redacted.ch/static/styles/assets/icons/Forum-Light-Locked.svg)
+	background-image:url(https://redacted.sh/static/styles/assets/icons/Forum-Light-Locked.svg)
 }
 
 .read_locked, .unread_locked {
@@ -4763,8 +4764,8 @@ table.staff {
 	color:rgb(var(--alt-accent))
 }
 
-.torrent_table tr:not(.edition):not(.group):not(.colhead):not(.colhead_dark):not(.torrentdetails):hover td {
-	background:#fbf7f7
+.torrent_table tr:not(.edition):not(.group):not(.colhead):not(.colhead_dark):not(tr[id^="torrent_"]):hover td {
+	background: #F7F9FA
 }
 
 .group_image {
@@ -5036,25 +5037,25 @@ table.staff {
 	color:#c82525
 }
 
-#torrents .torrentdetails div:nth-of-type(6) blockquote:last-child {
+#torrents tr[id^="torrent_"] div:nth-of-type(6) blockquote:last-child {
 	font-size: .9em;
 	font-weight: 400 !important;
 	margin-bottom:15px
 }
 
-#torrents .torrentdetails td {
+#torrents tr[id^="torrent_"] td {
 	padding:8px
 }
 
-#torrents .torrentdetails blockquote {
+#torrents tr[id^="torrent_"] blockquote {
 	width:unset !important
 }
 
-#torrents .torrentdetails div blockquote:last-of-type span, #torrents .torrentdetails div blockquote:last-of-type strong {
+#torrents tr[id^="torrent_"] div blockquote:last-of-type span, #torrents tr[id^="torrent_"] div blockquote:last-of-type strong {
 	font-weight:400 !important
 }
 
-#torrents .torrentdetails div blockquote {
+#torrents tr[id^="torrent_"] div blockquote {
 	border-radius: 0;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -5075,30 +5076,30 @@ table.staff {
 	content: "[" !important
 }
 
-#torrents .torrentdetails table {
+#torrents tr[id^="torrent_"] table {
 	border-collapse: collapse;
-	margin:0 auto 30px
+	margin:15px auto 15px
 }
 
-.torrentdetails table {
+tr[id^="torrent_"] table {
 	width:95%
 }
 
-.torrentdetails table tr:not(:first-of-type) {
+tr[id^="torrent_"] table tr:not(:first-of-type) {
 	background: #faf8f8;
 	border:1px solid #ddd
 }
 
-.torrentdetails table tr:not(:first-of-type):hover {
+tr[id^="torrent_"] table tr:not(:first-of-type):hover {
 	background:#f4f2f2
 }
 
-.torrentdetails table .colhead_dark {
+tr[id^="torrent_"] table .colhead_dark {
 	background: #efefef;
 	border:1px solid #ccc
 }
 
-.torrentdetails table .colhead_dark td {
+tr[id^="torrent_"] table .colhead_dark td {
 	color:#a99 !important
 }
 
@@ -5113,13 +5114,13 @@ table.staff {
 	visibility:visible
 }
 
-#torrents .torrentdetails table td {
+#torrents tr[id^="torrent_"] table td {
 	font-weight: 400;
 	padding: 5px 10px !important;
 	vertical-align:middle
 }
 
-#torrents .torrentdetails h4 {
+#torrents tr[id^="torrent_"] h4 {
 	display:none
 }
 
