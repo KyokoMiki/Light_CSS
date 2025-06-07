@@ -1988,13 +1988,15 @@ ul#userinfo_username:hover li:first-of-type a {
 #logo a {
 	background-position: 0;
 	background-repeat: no-repeat;
-	background-size: contain;
 	display: block;
 	height: 40px;
 	-webkit-transition: none;
 	-o-transition: none;
 	transition: none;
-	background-image:url(https://jpopsuki.eu/static/styles/connection/images/logo.png)
+	background-image: url("https://static.libble.me/styles/classic_2/images/libblekd8.png");
+	background-size: 266.67px 62.67px;
+	background-position: -38.67px 0.33px;
+	filter: grayscale(1) invert(1);
 }
 
 #searchbars {

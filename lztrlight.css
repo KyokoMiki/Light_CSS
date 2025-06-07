@@ -1995,11 +1995,7 @@ ul#userinfo_username:hover li:first-of-type a {
 	-o-transition: none;
 	transition: none;
 	background-image:url(https://lztr.me/static/styles/shiro/images/LZTR80s-1.png);
-	filter: drop-shadow(1px 1px 1px black);
-}
-
-#logo a:hover {
-	background-position: 0
+	filter: invert(1);
 }
 
 #searchbars {
