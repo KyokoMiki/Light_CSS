@@ -428,7 +428,7 @@ h2 {
 }
 
 #userform td:not(.label) > strong, .donation_info_title, h3 {
-	color: #714139;
+	color: #2C5366;
 	font-size: 1.3em;
 	margin-bottom: 5px;
 	padding-bottom: 5px;
@@ -1095,8 +1095,8 @@ blockquote {
 	border-radius: 3px;
 	margin: 4px 5px 10px;
 	padding: 10px;
-	background: rgba(20, 0, 10, .08);
-	border: 1px solid rgba(20, 10, 0, .15);
+	background: rgba(6, 6, 6, .08);
+	border: 1px solid rgba(12, 12, 12, .15);
 	-webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, .1);
 	box-shadow:0 0 3px 1px rgba(0, 0, 0, .1)
 }
@@ -5030,7 +5030,7 @@ table.staff {
 }
 
 .tags a:hover {
-	color:#c82525
+	color:#1669B8
 }
 
 #torrents tr[id^="torrent_"] div:nth-of-type(6) blockquote:last-child {
