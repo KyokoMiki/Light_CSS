@@ -1988,17 +1988,18 @@ ul#userinfo_username:hover li:first-of-type a {
 #logo a {
 	background-position: 0;
 	background-repeat: no-repeat;
-	background-size: 199px 40px;
+	background-size: contain;
 	display: block;
 	height: 40px;
 	-webkit-transition: none;
 	-o-transition: none;
 	transition: none;
-	background-image:url(https://jpopsuki.eu/static/styles/connection/images/logo.png)
+	background-image:url(https://lztr.me/static/styles/shiro/images/LZTR80s-1.png);
+	filter: drop-shadow(1px 1px 1px black);
 }
 
 #logo a:hover {
-	background-position:100%
+	background-position: 0
 }
 
 #searchbars {
