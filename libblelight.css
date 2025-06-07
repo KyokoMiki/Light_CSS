@@ -226,7 +226,7 @@ canvas {
 	color:#555
 }
 
-#artist .edit_form, #artist_information, #changelog .changelog_entry, #collage .create_form, #edit_collage, #filter_form, #friends .friends_table, #inbox #searchbox, #questions .box2, #reportform, #reports .box, #similar_artist_map, #staff .box, #torrents .edit_form, #torrents .torrent_table ~ .box:nth-of-type(1), #upload #content > div, #user .edit_form:not(#userform), .inbox_message, .sidebar .box, .users_reports_table, .vertical_space.box, table.forum_post {
+#artist .edit_form, #artist_information, #changelog .changelog_entry, #collage .create_form, #edit_collage, #filter_form, #friends .friends_table, #inbox #searchbox, #questions .box2, #reportform, #reports .box, #similar_artist_map, #staff .box, #torrents .edit_form, #torrents .torrent_table ~ .box:nth-of-type(1), #upload #content > div, #user .edit_form:not(#userform), .inbox_message, .news:not(#news_center) .box, .users_reports_table, .vertical_space.box, table.forum_post {
 	background-color: #f0f0f0;
 	border: 1px solid #d3d0d1;
 	-webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, .1);
@@ -535,7 +535,7 @@ input[style *="width: 98%"], textarea[style *="width: 98%"] {
 	width:100% !important
 }
 
-.sidebar .box input[type=email], .sidebar .box input[type=password], .sidebar .box input[type=search], .sidebar .box input[type=text], .sidebar .box input[type=url], .sidebar .box select, .sidebar .box textarea {
+.news:not(#news_center) .box input[type=email], .news:not(#news_center) .box input[type=password], .news:not(#news_center) .box input[type=search], .news:not(#news_center) .box input[type=text], .news:not(#news_center) .box input[type=url], .news:not(#news_center) .box select, .news:not(#news_center) .box textarea {
 	background-color: #fafafa;
 	border:1px solid #ccc
 }
@@ -662,20 +662,20 @@ marquee {
 	max-width:100%
 }
 
-.sidebar img {
+.news:not(#news_center) img {
 	height: unset;
 	max-width:100% !important
 }
 
-.main_column {
-	margin:0 310px 0 0
+#news_center {
+	margin:0 210px
 }
 
-.main_column .box, .main_column table {
+#news_center .box, #news_center table {
 	margin-bottom:10px
 }
 
-.main_column table.forum_post {
+#news_center table.forum_post {
 	margin-left: auto;
 	margin-right: auto;
 	width:100%
@@ -787,7 +787,7 @@ p.min_padding {
 	padding:1em
 }
 
-.sidebar .pad {
+.news:not(#news_center) .pad {
 	overflow-wrap: break-word;
 	padding:10px 5px
 }
@@ -801,10 +801,17 @@ p.min_padding {
 	padding-top:0
 }
 
-.sidebar {
-	float: right;
+.news:not(#news_center) {
 	height: 100%;
-	width:290px
+	width: 200px
+}
+
+div#news_left {
+    float: left
+}
+
+div#news_right {
+    float: right
 }
 
 .thin:after {
@@ -813,33 +820,33 @@ p.min_padding {
 	display:block
 }
 
-#staff .box, .sidebar .box {
+#staff .box, .news:not(#news_center) .box {
 	margin: 0 0 15px;
 	padding:10px !important
 }
 
-.sidebar .box ol, .sidebar .box ul {
+.news:not(#news_center) .box ol, .news:not(#news_center) .box ul {
 	margin: 0;
 	padding:0
 }
 
-.sidebar .box li ol, .sidebar .box li ul {
+.news:not(#news_center) .box li ol, .news:not(#news_center) .box li ul {
 	margin:0 0 0 15px
 }
 
-.sidebar .box ol li {
+.news:not(#news_center) .box ol li {
 	clear: both;
 	display: block;
 	margin: 0;
 	padding:0
 }
 
-.sidebar .box ol li a {
+.news:not(#news_center) .box ol li a {
 	padding: 4px 0;
 	text-align:left
 }
 
-.sidebar .box li {
+.news:not(#news_center) .box li {
 	list-style-type: none;
 	margin-left:5px
 }
@@ -862,7 +869,7 @@ p.min_padding {
 	padding:3px 10px 10px
 }
 
-.sidebar .body {
+.news:not(#news_center) .body {
 	padding:3px 3px 10px 0
 }
 
@@ -1044,7 +1051,7 @@ a.small_downvote, a.vote_artist_down, a.vote_tag_down {
 	font-weight:400
 }
 
-#rules h4, #rules h5, #torrents table:not(.forum_post) .colhead_dark, .sidebar .colhead_dark, .sidebar .head {
+#rules h4, #rules h5, #torrents table:not(.forum_post) .colhead_dark, .news:not(#news_center) .colhead_dark, .news:not(#news_center) .head {
 	color: #544;
 	font-family: apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 	font-weight: 400;
@@ -1052,11 +1059,11 @@ a.small_downvote, a.vote_artist_down, a.vote_tag_down {
 	vertical-align:middle
 }
 
-#rules h4 a, #rules h5 a, #torrents table:not(.forum_post) .colhead_dark a, .colhead a, .sidebar .colhead_dark a, .sidebar .head a {
+#rules h4 a, #rules h5 a, #torrents table:not(.forum_post) .colhead_dark a, .colhead a, .news:not(#news_center) .colhead_dark a, .news:not(#news_center) .head a {
 	color:#836846
 }
 
-#rules h4 a:hover, #rules h5 a:hover, #torrents table:not(.forum_post) .colhead_dark a:hover, .colhead a:hover, .sidebar .colhead_dark a:hover, .sidebar .head a:hover {
+#rules h4 a:hover, #rules h5 a:hover, #torrents table:not(.forum_post) .colhead_dark a:hover, .colhead a:hover, .news:not(#news_center) .colhead_dark a:hover, .news:not(#news_center) .head a:hover {
 	color:gray
 }
 
@@ -2188,7 +2195,7 @@ ul#userinfo_username:hover li:first-of-type a {
 		font-size:.9em
 	}
 
-	.sidebar {
+	.news:not(#news_center) {
 		display: -webkit-box !important;
 		display: -ms-flexbox !important;
 		display: flex !important;
@@ -2200,7 +2207,7 @@ ul#userinfo_username:hover li:first-of-type a {
 		margin:0 -5px 5px !important
 	}
 
-	.sidebar .box {
+	.news:not(#news_center) .box {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		-webkit-box-flex: 1 !important;
@@ -3198,7 +3205,7 @@ img[alt="Leechers"] {
 	display:block
 }
 
-#artist .main_column {
+#artist #news_center {
 	padding-left: 0;
 	padding-right:0
 }
@@ -3224,7 +3231,7 @@ img[alt="Leechers"] {
 	margin-top:4px
 }
 
-.sidebar .box_artists #artist_list.stats.nobullet {
+.news:not(#news_center) .box_artists #artist_list.stats.nobullet {
 	margin-right:18px
 }
 
@@ -3376,6 +3383,87 @@ ul.collage_images li a {
 }
 
 ul.collage_images li a span {
+	line-height:1.5em
+}
+
+
+#l5torr table tr {
+	display: -webkit-box !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	padding: 5px !important;
+	width: 100%;
+	background: #e5e5e5;
+	border:1px solid #ccc
+}
+
+#l5torr table tr, #l5torr table tr td {
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box
+}
+
+#l5torr table tr td {
+	display: block;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	height: auto;
+	padding: 3px;
+	width:20%
+}
+
+#l5torr table tr td:not([id^=last5torrents]) {
+	height: 0;
+	padding:0
+}
+
+#l5torr table tr td:before {
+	content: "";
+	float: left;
+	padding-top:100%
+}
+
+#l5torr table tr img {
+	bottom: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: auto;
+	left: 0;
+	margin: auto;
+	max-height: 100%;
+	max-width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: auto;
+	border: 3px solid #fff;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+	box-shadow:0 0 5px rgba(0, 0, 0, .25)
+}
+
+#l5torr table tr img:hover {
+	-webkit-box-shadow: 0 0 3px rgba(235, 245, 20, .3);
+	box-shadow:0 0 3px rgba(235, 245, 20, .3)
+}
+
+#l5torr table tr td a {
+	color: #555;
+	font-family: Consolas, Monospace;
+	height: 100%;
+	overflow: visible;
+	position: relative;
+	text-align: center;
+	display: block
+}
+
+#l5torr table tr td a span {
 	line-height:1.5em
 }
 
@@ -3645,17 +3733,17 @@ table.forum_post td.body {
 	word-wrap:break-word
 }
 
-.main_column td.avatar {
+#news_center td.avatar {
 	padding: 5px 0 5px 5px;
 	width:125px !important
 }
 
-.main_column td.avatar img {
+#news_center td.avatar img {
 	max-height: 285px;
 	max-width:125px !important
 }
 
-.main_column table.forum_post td.body {
+#news_center table.forum_post td.body {
 	padding:5px 10px
 }
 
@@ -5361,7 +5449,7 @@ tr[id^="torrent_"] table .colhead_dark td {
 	text-align:right
 }
 
-#userform .main_column {
+#userform #news_center {
 	padding:0
 }
 
@@ -5377,12 +5465,12 @@ tr[id^="torrent_"] table .colhead_dark td {
 	font-size:1.2em
 }
 
-#userform .sidebar #settings_sections {
+#userform .news:not(#news_center) #settings_sections {
 	position: unset;
 	width:260px
 }
 
-#userform .sidebar #settings_sections.fixed {
+#userform .news:not(#news_center) #settings_sections.fixed {
 	position:fixed
 }
 
@@ -5390,11 +5478,11 @@ tr[id^="torrent_"] table .colhead_dark td {
 	cursor:pointer
 }
 
-#userform .sidebar #settings_sections a {
+#userform .news:not(#news_center) #settings_sections a {
 	color:#444
 }
 
-#userform .sidebar #settings_sections a:hover {
+#userform .news:not(#news_center) #settings_sections a:hover {
 	color:#ff9060
 }
 
